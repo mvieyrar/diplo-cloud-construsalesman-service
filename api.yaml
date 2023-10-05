@@ -1,0 +1,134 @@
+openapi: 3.0.1
+info:
+  title: Construsales Construsalesman Microservice Endpoints
+  description: Definición de los Endpoints de Construsalesman Service para el sistema
+    Construsales
+  contact:
+    name: UNAM
+    url: https://www.unam.mx
+    email: mvieyrar@gmail.com
+  version: v1
+servers:
+- url: http://localhost:8083
+  description: Generated server url
+tags:
+- name: vendedor
+  description: API del Recurso Vendedor
+paths:
+  /api/vendedores/{id}:
+    get:
+      tags:
+      - vendedor
+      summary: Obtener Vendedor por Id
+      operationId: obtenerVendedorPorId
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Vendedor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendedor'
+        "404":
+          description: No encontrado
+    put:
+      tags:
+      - vendedor
+      summary: Actualizar Vendedor
+      operationId: actualizarVendedor
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vendedor'
+        required: true
+      responses:
+        "200":
+          description: Vendedor actualizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendedor'
+        "404":
+          description: No encontrado
+    delete:
+      tags:
+      - vendedor
+      summary: Eliminar Vendedor
+      operationId: eliminarVendedor
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: void
+  /api/vendedores:
+    get:
+      tags:
+      - vendedor
+      summary: Obtener todos los Vendedores
+      operationId: obtenerVendedores
+      responses:
+        "200":
+          description: Listado de Vendedores
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vendedor'
+    post:
+      tags:
+      - vendedor
+      summary: Crear Vendedor
+      operationId: crearVendedor
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vendedor'
+        required: true
+      responses:
+        "201":
+          description: Vendedor Creado Exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendedor'
+components:
+  schemas:
+    Vendedor:
+      type: object
+      properties:
+        id:
+          type: string
+        nombre:
+          type: string
+        paterno:
+          type: string
+        materno:
+          type: string
+        sucursal:
+          type: string
+        claveagente:
+          type: string
+        objetivo:
+          type: number
+          format: double
+        venta:
+          type: number
+          format: double
