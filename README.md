@@ -44,5 +44,12 @@ The expected result should looks like:
 }
 ```
 ### Reference Documentation
+For further reference, please consider the following sections:
+
+* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.15/maven-plugin/reference/html/)https://docs.spring.io/spring-boot/docs/2.7.15/maven-plugin/reference/html/
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.15/maven-plugin/reference/html/#build-image)https://docs.spring.io/spring-boot/docs/2.7.15/maven-plugin/reference/html/#build-image
+* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.15/reference/htmlsingle/index.html#web)https://docs.spring.io/spring-boot/docs/2.7.15/reference/htmlsingle/index.html#web
+* [Spring Data MongoDB](https://docs.spring.io/spring-boot/docs/2.7.15/reference/htmlsingle/index.html#data.nosql.mongodb)https://docs.spring.io/spring-boot/docs/2.7.15/reference/htmlsingle/index.html#data.nosql.mongodb
 
 ### Guides
