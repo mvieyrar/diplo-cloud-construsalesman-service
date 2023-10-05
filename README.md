@@ -14,6 +14,7 @@ The following scripts are provided for the MongoDB database/collections creation
 // TODO
 
 ## Test
+Execute the next `curl` command to validate the deploy of the service.
 
 ### Reference Documentation
 
