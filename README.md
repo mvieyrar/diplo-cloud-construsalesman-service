@@ -1,13 +1,11 @@
 # Getting Started
 
-  # Project
+## Project
+  
+## Deploy
 
-  # Deploy
+## Test
 
-  # Test
-    
-    # Reference Documentation
+### Reference Documentation
 
-    # Guides
-
-    
+### Guides
