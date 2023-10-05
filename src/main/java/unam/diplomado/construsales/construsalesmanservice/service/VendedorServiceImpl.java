@@ -3,10 +3,12 @@ package unam.diplomado.construsales.construsalesmanservice.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import unam.diplomado.construsales.construsalesmanservice.domain.Vendedor;
 import unam.diplomado.construsales.construsalesmanservice.repository.VendedorRepository;
 
+@Service
 public class VendedorServiceImpl implements VendedorService{
 	
 	@Autowired
