@@ -40,6 +40,8 @@ db.vendedor.find();
 
 For more details, please refer to Instructions_for_execution.docx file.
 
+For the API documentation, please refer to api.yaml file.
+
 
 ## Deploy
 
