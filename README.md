@@ -54,3 +54,9 @@ For further reference, please consider the following sections:
 * [Mongo Docker Official Image](https://hub.docker.com/_/mongo)
 
 ### Guides
+The following guides illustrate how to use some features concretely:
+
+* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)https://spring.io/guides/tutorials/rest/
+* [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)https://spring.io/guides/gs/accessing-data-mongodb/
