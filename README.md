@@ -53,13 +53,42 @@ For the API documentation, please refer to api.yaml file.
     * kubectl apply -f construsalesman-deployment.yaml
     * kubectl apply -f construsalesman-service.yaml
     * kubectl apply -f construsalesman-ingress.yaml
-* Verify deployment
+* Verify deployment:
     * kubectl get pods | grep construsalesman
     * kubectl get services | grep construsalesman
     * kubectl get ingress | gre construsalesman
 
 ## Test
-Execute the next `curl` command to validate the deploy of the service.
+Execute the next `curl` command to validate the deploy of the service from localhost.
+```
+curl -X 'POST' \
+  'http://localhost:8083/api/vendedores' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "nombre": "Miguel Alejandro",
+    "paterno": "Vieyra",
+    "materno": "Rivera",
+    "sucursal": "Mexico",
+    "claveagente": "MIVI",
+    "objetivo": 1000000,
+    "venta": 999000
+}'
+```
+The expected result should looks like:
+```
+{
+    "id": "651e2892a76c343fff4e55b6",
+    "nombre": "Miguel Alejandro",
+    "paterno": "Vieyra",
+    "materno": "Rivera",
+    "sucursal": "Mexico",
+    "claveagente": "MIVI",
+    "objetivo": 1000000.0,
+    "venta": 999000.0
+}
+```
+Execute the next `curl` command to validate the deploy of the service from Web.
 ```
 curl -X 'POST' \
   'http://localhost:8083/api/vendedores' \
