@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: construsalesman-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: construsalesman
+  template:
+    metadata:
+      labels:
+        app: construsalesman
+    spec:
+      containers:
+        - name: construsalesman-container
+          image: aleviemk/construsalesman-app-user18:v7
+          ports:
+            - containerPort: 8080
