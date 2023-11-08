@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: construsalesman-service
+spec:
+  selector:
+    app: construsalesman
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
