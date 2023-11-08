@@ -45,7 +45,8 @@ For the API documentation, please refer to api.yaml file.
 
 ## Deploy
 
-Download image: docker pull aleviemk/construsalesman-app-user18:v7
+Image: docker pull aleviemk/construsalesman-app-user18:v7
+Kubernetes deployment file: construsalesman-deployment.yaml
 
 ## Test
 Execute the next `curl` command to validate the deploy of the service.
