@@ -23,7 +23,7 @@ MONGO_PORT
 MONGO_PWD
 MONGO_USER
 TOMCART_PORT
-7.	Open a REST client software, introduce the URL http://localhost:8080/api/vendedores . Choose POST method and introduce the following JSON in the body:
+7.	Open a REST client software, introduce the URL http://localhost:8080/api/vendedores from localhost or http://k8s.nuup.ninja/api/vendedores from Web  . Choose POST method and introduce the following JSON in the body:
 {
     "nombre":"Miguel Alejandro",
     "paterno": "Vieyra",
