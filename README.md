@@ -45,7 +45,7 @@ For the API documentation, please refer to api.yaml file.
 
 ## Deploy
 
-// TODO
+Download image: docker pull aleviemk/construsalesman-app-user18:v7
 
 ## Test
 Execute the next `curl` command to validate the deploy of the service.
