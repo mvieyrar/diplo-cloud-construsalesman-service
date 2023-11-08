@@ -50,9 +50,13 @@ For the API documentation, please refer to api.yaml file.
 * Kubernetes service file: construsalesman-service.yaml
 * Kubernetes ingress file: construsalesman-ingress.yaml
 * Apply Kubernetes resources:
-** kubectl apply -f construsalesman-deployment.yaml
-** kubectl apply -f construsalesman-service.yaml
-** kubectl apply -f construsalesman-ingress.yaml
+    * kubectl apply -f construsalesman-deployment.yaml
+    * kubectl apply -f construsalesman-service.yaml
+    * kubectl apply -f construsalesman-ingress.yaml
+* Verify deployment
+    * kubectl get pods | grep construsalesman
+    * kubectl get services | grep construsalesman
+    * kubectl get ingress | gre construsalesman
 
 ## Test
 Execute the next `curl` command to validate the deploy of the service.
