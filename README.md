@@ -45,9 +45,10 @@ For the API documentation, please refer to api.yaml file.
 
 ## Deploy
 
-* Image: docker pull aleviemk/construsalesman-app-user18:v7
+* Docker Hub image: docker pull aleviemk/construsalesman-app-user18:v7
 * Kubernetes deployment file: construsalesman-deployment.yaml
 * Kubernetes service file: construsalesman-service.yaml
+* Kubernetes ingress file: construsalesman-ingress.yaml
 
 ## Test
 Execute the next `curl` command to validate the deploy of the service.
