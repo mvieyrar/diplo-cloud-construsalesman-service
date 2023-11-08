@@ -91,7 +91,7 @@ The expected result should looks like:
 Execute the next `curl` command to validate the deploy of the service from Web.
 ```
 curl -X 'POST' \
-  'http://localhost:8083/api/vendedores' \
+  'http://k8s.nuup.ninja/api/vendedores' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
