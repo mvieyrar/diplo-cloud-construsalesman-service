@@ -1,0 +1,22 @@
+[
+	{
+	    "id": "651e2892a76c343fff4e55b6",
+	    "nombre": "Miguel Alejandro",
+	    "paterno": "Vieyra",
+	    "materno": "Rivera",
+	    "sucursal": "Mexico",
+	    "claveagente": "MIVI",
+	    "objetivo": 1000000.0,
+	    "venta": 999000.0
+	},
+	{
+	    "id": "651e2892a76c343fff4e55b7",
+	    "nombre": "Miguel Alejandro",
+	    "paterno": "Vieyra",
+	    "materno": "Rivera",
+	    "sucursal": "Mexico",
+	    "claveagente": "MIVI",
+	    "objetivo": 1000000.0,
+	    "venta": 999000.0
+	}
+]
