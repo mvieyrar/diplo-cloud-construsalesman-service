@@ -57,6 +57,9 @@ For the API documentation, please refer to api.yaml file.
     * kubectl get pods | grep construsalesman
     * kubectl get services | grep construsalesman
     * kubectl get ingress | gre construsalesman
+## Test within pod
+To enter to pod execute the folllowing command:
+kubectl exec -it <podname> -- /bin/bash
 
 ## Test
 Execute the next `curl` command to validate the deploy of the service from localhost.
