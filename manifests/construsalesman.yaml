@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: construsalesman-container
-          image: aleviemk/construsalesman-app-user18:v8
+          image: aleviemk/construsalesman-app-user18:v9
           ports:
             - containerPort: 8080
 ---
