@@ -1,5 +1,5 @@
 # Usa la imagen oficial de Maven como imagen base
-FROM maven:3.8.4-openjdk-17-slim AS build
+FROM docker.io/maven:3.8.4-openjdk-17-slim AS build
 MAINTAINER Miguel Vieyra <aleviemk@gmail.com>
 
 # Copia los archivos de configuración y el código fuente
@@ -20,7 +20,7 @@ ENV TOMCAT_PORT 8080
 RUN mvn clean install
 
 # Cambia a una imagen más ligera de Java para la ejecución
-# FROM openjdk:17-jre-slim
+# FROM docker.io/openjdk:17-jre-slim
 
 # Copia el archivo JAR generado en la etapa anterior
 #COPY /usr/src/app/target/construsalesman-service-0.0.1-SNAPSHOT.jar /app/construsalesman.jar
