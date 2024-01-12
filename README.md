@@ -65,6 +65,8 @@ The complete specification of the image that contains the application is in ./Do
 With final CI/CD project all of these deployment tasks now run automatically when pushing to this repository from your local one a Tekton event listener is triggered by GitHub Webhook request.
 Such trigger executes tasks like clone, compile, create image, push this image and deploy to OpenShift.
 
+For more info read the file: Demostracion_de_Proyecto_Final_Vieyra_Rivera_Miguel_Alejandro.pdf
+
 ## Test within pod
 To enter to pod execute the folllowing command:
 kubectl exec -it <podname> -- /bin/bash
