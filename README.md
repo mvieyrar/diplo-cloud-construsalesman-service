@@ -62,7 +62,7 @@ The complete specification of the image that contains the application is in ./Do
     * kubectl get services | grep construsalesman
     * kubectl get ingress | gre construsalesman
 
-With final CI/CD project all of deployment task now run automatically when pushing to this repository from your local one. A Tekton event listener is triggered by GitHub Webhook request.
+With final CI/CD project all of these deployment tasks now run automatically when pushing to this repository from your local one a Tekton event listener is triggered by GitHub Webhook request.
 Such trigger executes tasks like clone, compile, create image, push this image and deploy to OpenShift.
 
 ## Test within pod
