@@ -45,8 +45,6 @@ For the API documentation, please refer to api.yaml file.
 
 ## Deploy
 
-### Creating the image
-
 This image is based on docker.io/aleviemk/construsalesman-app-user18
 
 The complete specification of the image that contains the application is in ./Dockerfile
@@ -63,6 +61,10 @@ The complete specification of the image that contains the application is in ./Do
     * kubectl get pods | grep construsalesman
     * kubectl get services | grep construsalesman
     * kubectl get ingress | gre construsalesman
+
+With final CI/CD project all of deployment task now run automatically when pushing to this repository from your local one. A Tekton event listener is triggered by GitHub Webhook request.
+Such trigger executes tasks like clone, compile, create image, push this image and deploy to OpenShift.
+
 ## Test within pod
 To enter to pod execute the folllowing command:
 kubectl exec -it <podname> -- /bin/bash
