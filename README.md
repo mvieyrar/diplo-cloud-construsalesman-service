@@ -47,6 +47,8 @@ For the API documentation, please refer to api.yaml file.
 
 ### Creating the image
 
+This image is based on
+
 * Docker Hub image: docker pull aleviemk/construsalesman-app-user18:v7
 * Kubernetes deployment file: construsalesman-deployment.yaml
 * Kubernetes service file: construsalesman-service.yaml
