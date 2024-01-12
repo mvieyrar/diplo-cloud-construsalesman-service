@@ -1,0 +1,22 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: construsalesman-proyectofinal4-event-listener
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - name: github-listener
+    # - name: github-listener
+    #   interceptors:
+    #     - github:
+    #         secretRef:
+    #           secretName: github-secret
+    #           secretKey: secretToken
+    #         eventTypes:
+    #           - pull_request
+    #     - cel:
+    #         filter: "body.action in ['opened', 'synchronize', 'reopened']"
+      bindings:
+        - ref: construsalesman-proyectofinal4-trigger-binding
+      template:
+        ref: construsalesman-proyectofinal4-trigger-template

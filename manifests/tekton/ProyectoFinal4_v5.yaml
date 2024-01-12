@@ -1,0 +1,89 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: proyectofinal4
+  namespace: user18
+spec:
+  params:
+  - name: url
+    type: string
+  - name: deleteExisting
+    type: string
+  - name: maven-image
+    type: string
+    description: Image for compile pom
+    default: 'gcr.io/cloud-builders/mvn@sha256:8f38a2667125a8d83f6e1997847fedb6a06f041c90e2244884153d85d95f869b'
+  - name: image-full-path-with-tag
+    type: string
+    description: The image full path to host the built image, with version tag.
+  tasks:
+    - name: git-clone
+      taskRef:
+        name: git-clone
+      params:
+      - name: url
+        value: $(params.url)
+      - name: deleteExisting
+        value: $(params.deleteExisting)
+      workspaces:
+      - name:  output
+        workspace: my-workspace
+    - name: list-directory
+      runAfter:
+        - git-clone
+      taskRef:
+        name: list-directory
+      workspaces:
+      - name: directory
+        workspace: my-workspace
+    - name: maven
+      runAfter:
+        - list-directory
+      params:
+      - name: GOALS
+        value: 
+          - -B
+          - -DskipTests
+          - clean
+          - package
+      - name: MAVEN_IMAGE
+        value: $(params.maven-image)
+      taskRef:
+        name: maven
+      workspaces:
+      - name: source
+        workspace: my-workspace
+      - name: maven-settings
+        workspace: my-workspace
+    - name: buildah
+      taskRef:
+        name: buildah
+      runAfter:
+        - maven
+      params:
+        - name: IMAGE
+          value: $(params.image-full-path-with-tag)
+        - name: TLSVERIFY
+          value: "false"
+        - name: STORAGE_DRIVER
+          value: "vfs"
+      workspaces:
+        - name: source
+          workspace: my-workspace
+    - name: deploy
+      taskRef:
+        name: kubernetes-actions
+      runAfter:
+        - buildah
+      params:
+        - name: script
+          value: |
+            kubectl delete deployment construsalesman-service-proyectofinal4
+            kubectl create deployment construsalesman-service-proyectofinal4 --image=$(params.image-full-path-with-tag)
+            echo "-----"
+            kubectl get deployment      
+  workspaces:
+  - name: my-workspace
+    optional: false
+
+
