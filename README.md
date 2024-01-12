@@ -49,7 +49,9 @@ For the API documentation, please refer to api.yaml file.
 
 This image is based on docker.io/aleviemk/construsalesman-app-user18
 
-* Docker Hub image: docker pull aleviemk/construsalesman-app-user18:v7
+The complete specification of the image that contains the application is in ./Dockerfile
+
+* Docker Hub image: docker pull aleviemk/construsalesman-app-user18:v11
 * Kubernetes deployment file: construsalesman-deployment.yaml
 * Kubernetes service file: construsalesman-service.yaml
 * Kubernetes ingress file: construsalesman-ingress.yaml
