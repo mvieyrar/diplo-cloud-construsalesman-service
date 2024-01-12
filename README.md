@@ -9,7 +9,7 @@ The following scripts are provided for the MongoDB database/collections creation
 
 * construsalesmandb_creation.js
 
-The instructions to execute this microservice are:
+The instructions to execute manually this microservice are:
 1.	Clone the git repo to your local repo.
 2.	Copy the folder to your Eclipse workspace.
 3.	Open Eclipse IDE and import project.
@@ -47,7 +47,7 @@ For the API documentation, please refer to api.yaml file.
 
 ### Creating the image
 
-This image is based on
+This image is based on docker.io/aleviemk/construsalesman-app-user18
 
 * Docker Hub image: docker pull aleviemk/construsalesman-app-user18:v7
 * Kubernetes deployment file: construsalesman-deployment.yaml
